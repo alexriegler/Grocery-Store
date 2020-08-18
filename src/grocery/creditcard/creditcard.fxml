@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<GridPane alignment="center" hgap="10" prefHeight="536.0" prefWidth="354.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grocery.creditcard.CreditCardController">
+    <padding>
+        <Insets bottom="10.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+
+    <Text text="Credit Card Information" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+
+    <Label text="Name on card:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Credit Card Number:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+    <TextField fx:id="numberField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="CVV:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+    <TextField fx:id="cvvField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label text="Expiration date (mm/yy):" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+
+    <HBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <TextField fx:id="exp_dateMonth" maxWidth="35" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label text="/" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="exp_dateYear" maxWidth="35" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </HBox>
+
+
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="6" />
+    <ChoiceBox fx:id="addressBox" onAction="#boxAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <Label prefHeight="17.0" prefWidth="99.0" text="Street Number:" GridPane.rowIndex="7" />
+    <TextField fx:id="streetNum" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Label text="Street Name:" GridPane.rowIndex="8" />
+    <TextField fx:id="streetName" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <Label text="Apartment Number:" GridPane.rowIndex="9" />
+    <TextField fx:id="aptNum" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+    <Label text="City:" GridPane.rowIndex="10" />
+    <TextField fx:id="city" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+    <Label text="State:" GridPane.rowIndex="11" />
+    <ChoiceBox fx:id="stateBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+    <Label text="Zip/Postal Code:" GridPane.rowIndex="12" />
+    <TextField fx:id="zip" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+    <Label text="Country:" GridPane.rowIndex="13" />
+    <TextField fx:id="country" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="15">
+        <Button onAction="#handleSubmitButtonAction" text="Submit" />
+    </HBox>
+
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints maxHeight="29.0" minHeight="7.0" prefHeight="7.0" />
+        <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="25.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>

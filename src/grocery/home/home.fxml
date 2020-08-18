@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grocery.home.HomeController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AMM Grocery Store">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <VBox alignment="CENTER_LEFT">
+                     <children>
+                        <HBox alignment="BOTTOM_CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance: $">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="balanceAmountText" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT">
+                     <children>
+                        <Text fx:id="greetingText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, Username!">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <MenuButton fx:id="accountMenuButton" alignment="CENTER" mnemonicParsing="false" text="Your Account">
+                          <items>
+                            <MenuItem fx:id="profileMenuItem" mnemonicParsing="false" onAction="#profileMenuItemOnPress" text="Profile" />
+                            <MenuItem fx:id="orderMenuItem" mnemonicParsing="false" onAction="#orderMenuItemOnPress" text="Orders" />
+                              <MenuItem fx:id="cartMenuItem" mnemonicParsing="false" onAction="#cartMenuItemOnPress" text="Cart" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="switchAccountMenuItem" mnemonicParsing="false" onAction="#switchAccountMenuItemOnPress" text="Switch account" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="logOutMenuItem" mnemonicParsing="false" onAction="#logOutMenuItemOnPress" text="Log out" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Alex, Maria, and Martijn for CS425 Fall 2019.">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <ComboBox fx:id="stateComboBox" onAction="#onStateSelectAction" promptText="State" />
+                  <ComboBox fx:id="categoryComboBox" layoutX="10.0" layoutY="10.0" onAction="#onCategorySelectAction" promptText="Category">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:id="produceItem" fx:value="Produce" />
+                           <String fx:id="meatItem" fx:value="Meat" />
+                           <String fx:id="eggsAndDairyItem" fx:value="Eggs and Dairy" />
+                           <String fx:id="bakeryItem" fx:value="Bakery" />
+                           <String fx:id="frozenFoodsItem" fx:value="Frozen Foods" />
+                           <String fx:id="snackFoodsItem" fx:value="Snack Foods" />
+                           <String fx:id="alcoholicDrinksItem" fx:value="Alcoholic Drinks" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+                  <TextField fx:id="searchTextField" promptText="I'm looking for..." HBox.hgrow="ALWAYS" />
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonOnPress" text="Search" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="catalogTableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="productTableColumn" prefWidth="75.0" text="Product" />
+                <TableColumn fx:id="categoryTableColumn" prefWidth="75.0" text="Category" />
+                  <TableColumn fx:id="priceTableColumn" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="addInfoTableColumn" prefWidth="75.0" text="Additional Information" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <Button fx:id="detailsButton" mnemonicParsing="false" onAction="#detailsButtonOnPress" text="Show details" />
+                  <Button fx:id="addToCartButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addToCartButtonOnPress" text="Add to cart" />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+   <right>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cart">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Separator prefWidth="200.0" />
+                  <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="cartButton" mnemonicParsing="false" onAction="#cartButtonOnPress" text="Go to cart" />
+                  <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children></VBox>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>

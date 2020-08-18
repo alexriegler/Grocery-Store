@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="650.0"
+            xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="grocery.confirmation.ConfirmationController">
+   <children>
+      <GridPane layoutX="72.0" layoutY="38.0" prefHeight="73.0" prefWidth="464.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label layoutX="-22.0" layoutY="-13.0" text="Order Placed">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="deliveryDate" layoutX="-22.0" layoutY="30.0" text="Estimated Delivery" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="72.0" layoutY="117.0" prefHeight="262.0" prefWidth="464.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="222.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="totalLabel" text="Total: $ " GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableID" prefHeight="222.0" prefWidth="415.0">
+              <columns>
+                  <TableColumn fx:id="name" prefWidth="295.0" resizable="false" text="Item" />
+                  <TableColumn fx:id="quantity" prefWidth="92.0" resizable="false" text="Quantity" />
+                  <TableColumn fx:id="price" prefWidth="75.0" resizable="false" text="Price" />
+              </columns>
+            </TableView>
+            <Button mnemonicParsing="false" onAction="#handlePressHomeButton" text="Home" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
