@@ -19,8 +19,11 @@ The goal of this project was to build a grocery store application using a databa
 Our group began this project by writing down all of the information we needed to describe a grocery store and its users. Following that, we developed an [entity–relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) (ER model) that included the information we needed in an efficient manner. Then, we started working on our relational schema, which would be translated into an actual SQL script to create the tables and constraints using [PostgreSQL](https://www.postgresql.org/ "PostgreSQL: The world's most advanced open source database"). Finally, we worked on incorporating our database into our graphical user interface made with [JavaFX](https://openjfx.io/ "JavaFX").
 
 ## Screenshots
-Here are some in-game screenshots of _Street Runner_. You can also download [this video](./Videos/gameplay00.mp4) to watch some gameplay in action (unfortunately, the video is too large to preview on Github).
+Here are some images from the development process and some screenshots of the final application. You can also download [these videos](./Videos) to view the application in action (unfortunately, the videos are too large to preview on Github).
 
+### Development process
+
+### Final application
 Game Start
 ![Game Start](./Screenshots/gameStart00.PNG)
 
