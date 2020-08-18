@@ -41,8 +41,9 @@ Here are some images from the development process and some screenshots of the fi
 ![Orders](./Screenshots/orders.PNG)
 
 ## Technologies
-* [Unity 2018.4.25f1](https://unity3d.com/unity/qa/lts-releases "LTS Releases - Unity")
-* C# 4.0
+* [PostgreSQL](https://www.postgresql.org/ "PostgreSQL: The World's Most Advanced Open Source Relational Database")
+* Java
+  * [JavaFX](https://openjfx.io/ "JavaFx")
 
 ## Setup
 ### How to play
