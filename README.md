@@ -46,30 +46,17 @@ Here are some images from the development process and some screenshots of the fi
   * [JavaFX](https://openjfx.io/ "JavaFx")
 
 ## Setup
-### How to play
-You can go [here](https://connect.unity.com/mg/other/street-runner-prototype-3 "Street Runner (Prototype 3) - Unity Connect") to play the WebGL version of the game online from the Unity Connect website.
-
-### How to work with this Unity project
-You can view the code [here](./Assets/Scripts). To work with this project, you can follow the instructions on the [main README.md](../README.md#how-to-work-with-the-unity-projects).
+Instructions for local setup are WIP.
 
 ## Features
-* Infinite side scroll
-* Random obstacle spawning
-* Score UI
-* Double jump
-* Super speed ability
-* Intro walk in animation
-* Restart button
-
-## To-do List
-* Increase obstacle spawn rate when dashing
-* Increasing difficulty over time
-* Muffle music on death
-* Starting music (street sounds maybe)
-* And many other possiblities...
+* User login for customers and staff
+* Product search by name, category, or state
+* Add items to customer cart
+* Order items in customer cart
+* Database stock tracking
 
 ## Status
 Project is: _finished_
 
 ## Author
-Created by Alex Riegler.
+Created by Alex Riegler, Martijn Koning, and Maria.
