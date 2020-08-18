@@ -4,6 +4,8 @@
 ## Table of contents
 * [General Info](#general-info)
 * [Screenshots](#screenshots)
+  * [Development process](#development-process)
+  * [Final application](#final-application)
 * [Technologies](#technologies)
 * [Setup](#setup)
   * [How to play](#how-to-play)
@@ -22,19 +24,21 @@ Our group began this project by writing down all of the information we needed to
 Here are some images from the development process and some screenshots of the final application. You can also download [these videos](./Videos) to view the application in action (unfortunately, the videos are too large to preview on Github).
 
 ### Development process
+#### ER model
+![ER model](./ER-model/ER-model.PNG)
 
 ### Final application
-Game Start
-![Game Start](./Screenshots/gameStart00.PNG)
+#### Login
+![User select](./Screenshots/userSelect.PNG)
+![Staff login](./Screenshots/staffLogin.PNG)
+![Customer login](./Screenshots/customerLogin.PNG)
 
-Gameplay
-![Gameplay](./Screenshots/gameplay00.PNG)
-![Gameplay](./Screenshots/gameplay01.PNG)
-![Gameplay](./Screenshots/gameplay02.PNG)
-![Gameplay](./Screenshots/gameplay03.PNG)
-
-End of the game
-![End of the game](./Screenshots/gameOver00.PNG)
+#### Store page
+![Main page](./Screenshots/mainPage.PNG)
+![Product select](./Screenshots/productSelect.PNG)
+![Cart](./Screenshots/cart.PNG)
+![Order confirmation](./Screenshots/orderConfirmation.PNG)
+![Orders](./Screenshots/orders.PNG)
 
 ## Technologies
 * [Unity 2018.4.25f1](https://unity3d.com/unity/qa/lts-releases "LTS Releases - Unity")
