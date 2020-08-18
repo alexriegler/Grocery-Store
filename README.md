@@ -14,7 +14,9 @@
 * [Author](#author)
 
 ## General Info
-The [third week of the course](https://learn.unity.com/tutorial/week-3-sound-and-effects-jul-27-jul-31?uv=2018.4&courseId=5ed163d8edbc2a0969cd1ded "Week 3 - Sound and Effects: Jul 27 - Jul 31 | Unity Learn") focused on sounds, particles, and animations. We were tasked with creating a prototype game from assets provided by Unity. The game at a minimum was supposed to be a side scroller with the ability to jump. There were also some challenges which included spawning random obstacles, adding a double jump along with tall obstacles, adding a super speed ability, tracking score, and adding a walk in animation. I implemented all of these features in my game along with some additional features and modifications.
+The goal of this project was to build a grocery store application using a database backend to store information about products, availability of products in the stock, and customers of the store. Customers of the store were supposed to be able to search for products and look up information about products, setup an account and change their preferences and account details, order products, and make payments.
+
+Our group began this project by writing down all of the information we needed to describe a grocery store and its users. Following that, we developed an [entity–relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) (ER model) that included the information we needed in an efficient manner. Then, we started working on our relational schema, which would be translated into an actual SQL script to create the tables and constraints using [PostgreSQL](https://www.postgresql.org/ "PostgreSQL: The world's most advanced open source database"). Finally, we worked on incorporating our database into our graphical user interface made with [JavaFX](https://openjfx.io/ "JavaFX").
 
 ## Screenshots
 Here are some in-game screenshots of _Street Runner_. You can also download [this video](./Videos/gameplay00.mp4) to watch some gameplay in action (unfortunately, the video is too large to preview on Github).
