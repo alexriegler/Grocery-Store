@@ -8,12 +8,9 @@
   * [Final application](#final-application)
 * [Technologies](#technologies)
 * [Setup](#setup)
-  * [How to play](#how-to-play)
-  * [How to work with this Unity project](#how-to-work-with-this-unity-project)
 * [Features](#features)
-* [To-do List](#to-do-list)
 * [Status](#status)
-* [Author](#author)
+* [Authors](#authors)
 
 ## General Info
 The goal of this project was to build a grocery store application using a database backend to store information about products, availability of products in the stock, and customers of the store. Customers of the store were supposed to be able to search for products and look up information about products, setup an account and change their preferences and account details, order products, and make payments.
@@ -58,5 +55,5 @@ Instructions for local setup are WIP.
 ## Status
 Project is: _finished_
 
-## Author
+## Authors
 Created by Alex Riegler, Martijn Koning, and Maria.
